@@ -5,5 +5,11 @@
   "main": "index.js",
   "repository": "https://github.com/jballands/aoc17",
   "author": "Jon Ballands <jballands@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash.concat": "^4.5.0",
+    "lodash.max": "^4.0.1",
+    "lodash.min": "^4.0.1",
+    "lodash.pullat": "^4.6.0"
+  }
 }

@@ -1,7 +1,15 @@
+//
+//	jballands/aoc17
+//	day1
+//
+//	© 2017 Jonathan Ballands
+//
+
 const readFileAndStartIterating = require('../../helpers/readFile')
 	.readFileAndStartIterating;
 const iterate = require('../../helpers/iterate').iterate;
 
+// Part 1
 const sumAdjacent = (iterator, prevNumber = null, currSum = 0) => {
 	const data = parseInt(iterator.data);
 	prevNumber = parseInt(prevNumber);
@@ -17,6 +25,13 @@ const sumAdjacent = (iterator, prevNumber = null, currSum = 0) => {
 	return sumAdjacent(iterate(iterator), data, currSum);
 };
 
+readFileAndStartIterating(process.argv[2], iterator =>
+	console.log(
+		sumAdjacent(iterator, iterator.iterable[iterator.iterable.length - 1])
+	)
+);
+
+// Part 2
 const sumMod = (iterator, currSum = 0) => {
 	const data = parseInt(iterator.data);
 	const compare = parseInt(
@@ -36,14 +51,6 @@ const sumMod = (iterator, currSum = 0) => {
 	return sumMod(iterate(iterator), currSum);
 };
 
-// Part 1
-readFileAndStartIterating(process.argv[2], iterator =>
-	console.log(
-		sumAdjacent(iterator, iterator.iterable[iterator.iterable.length - 1])
-	)
-);
-
-// Part 2
 readFileAndStartIterating(process.argv[2], iterator =>
 	console.log(sumMod(iterator))
 );

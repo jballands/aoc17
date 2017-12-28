@@ -1,0 +1,9 @@
+{
+  "name": "aoc2017",
+  "version": "1.0.0",
+  "description": "Solutions for Advent of Code 2017 (http://adventofcode.com/2017)",
+  "main": "index.js",
+  "repository": "https://github.com/jballands/aoc17",
+  "author": "Jon Ballands <jballands@gmail.com>",
+  "license": "MIT"
+}
